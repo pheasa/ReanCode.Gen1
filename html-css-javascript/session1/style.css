@@ -1,0 +1,177 @@
+body{
+    margin: 0px;
+    font-family: 'Khmer', cursive;
+    /* font-family: Koulen,Arial,Helvetica,sans-serif; */
+}
+.float-left{
+    float: left;
+}
+.main{
+    width: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    float: left;
+}
+.mix-center{
+    margin-left: 10%;
+    float: left;
+    width: 80%;
+}
+/* -----------header------------------- */
+#header{
+    /* background-color: crimson; */
+    background-color: #161616;
+}
+.sub-header{
+    float: left;
+    height: 150px;
+
+}
+#logo{
+    width: 20%;
+    /* background-color: darkolivegreen; */
+}
+#logo img{
+    height: 80%;
+    padding-top: 5%;
+}
+#ads{
+    width: 80%;
+    /* background-color: darkorange; */
+}
+#ads img{
+    width: 80%;
+    padding-top: 2%;
+    float: right;
+}
+#main-menu{
+    float: right;
+    width: 100%;
+    padding:5px;
+}
+.sub-menu{
+    float: left;
+}
+.sub-menu a{
+    padding: 0px  10px;
+    float: left;
+    margin-top: 5px;
+    text-decoration: none;
+    color: white;
+    font-family: Koulen,Arial,Helvetica,sans-serif;
+    font-size: 25px;
+}
+.sub-menu a:hover{
+    color: #fa1939;
+    background-color: white;
+    border-radius: 5px;
+}
+#main-menu a img{
+    height: 50px;
+}
+/* -------------end header-------------- */
+/* -----------bodey----------------- */
+#body{
+    /* background-color: darkblue; */
+}
+.mix-center #top-body{
+    margin-top: 15px;
+}
+.mix-center #botton-body{
+    margin-top: 20px;
+}
+.mix-center .mix-body{
+    float: left;
+    width: 100%;
+    /* background-color: blue; */
+}
+.mix-body .mix-top-body{
+    float: left;
+}
+#news-top-body{
+    background-color: brown;
+    width: 69%;
+    margin-right: 1%;
+}
+#news-top-body .top-news-body{
+    width: 100%;
+    float: left;
+    height: 250px;
+}
+#news-top-body .top-left-news{
+    width: 55%;
+    height: 100%;
+    position: relative;
+}
+.top-left-news .bg{
+    background-color: black;
+    opacity: 20%;
+    position: absolute;
+    top:0px;left: 0px;
+    float: left;
+    width: 100%;
+    height: 100%;
+    transition: 1s;
+}
+.top-left-news .bg:hover{
+    opacity: 70%;
+}
+.time-date h5{
+    margin: 15px;
+}
+.title{
+    margin: 15px ;
+}
+.title .title-anima{
+    top: 35px;
+    transition: 0.5s;
+}
+.title .title-anima:hover{
+    top: 0px;
+}
+.title-anima h4{
+    margin: 0px;
+}
+.title-anima h6{
+    margin: 0px;
+}
+.time-date{
+    width: 100%;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+    color: white;
+    /* background-color: rgba(3,3,3,0.5); */
+}
+#news-top-body .top-right-news{
+    width: 45%;
+    height: 100%;
+    position: relative;
+}
+#ads-top-body{
+    /* background-color: chartreuse; */
+    width: 30%;
+}
+.news-status{
+    width: auto;
+    height: 30px;
+    clip-path: polygon(0 0, 90% 0, 100% 100%, 0% 100%);
+    padding: 0px 20px;
+    position: absolute;
+    top: 10px;
+    text-align: center;
+    color: white;
+}
+.right-top-body{
+    width: 100%;height: auto;
+}
+.mix-body-head ul{
+    border-color: red;
+    border-bottom: 3px solid red;
+    padding: 0px;
+}
+/* -----------end bodey----------------- */
+/* -------------footer----------------- */
+#footer{
+    background-color: darkmagenta;
+}
+/* ############end footer################ */
