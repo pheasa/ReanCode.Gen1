@@ -112,7 +112,7 @@ body{
     height: 100%;
     transition: 1s;
 }
-.top-left-news .bg:hover{
+.top-news-hover:hover .bg{
     opacity: 70%;
 }
 .time-date h5{
@@ -125,7 +125,7 @@ body{
     top: 35px;
     transition: 0.5s;
 }
-.title .title-anima:hover{
+.top-news-hover:hover .title-anima{
     top: 0px;
 }
 .title-anima h4{

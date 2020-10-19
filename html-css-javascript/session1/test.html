@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    .dd{
+        float: left;
+        width: 200px;
+        height: 200px;
+        position: relative;
+        background-color: red;
+    }
+    .tt1{
+        float: left;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        top: 0px;
+        left: 0px;
+        background-color: royalblue;
+    }
+    .tt2{
+        float: left;
+        position: absolute;
+        width: 70%;
+        height: 70%;
+        bottom: 0px;
+        right: 0px;
+        background-color: salmon;
+    }
+    .dd:hover .tt1{
+        opacity: 0.5;
+        background-color: yellow;
+    }
+    .dd:hover .tt2{
+        opacity: 0.5;
+        background-color: rgb(148, 0, 123);
+    }
+</style>
+<body>
+    <div class="dd">
+        <div class="tt1"></div>
+        <div class="tt2"></div>
+    </div>
+
+</body>
+</html>
