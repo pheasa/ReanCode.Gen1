@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="dd"></div>
+    <button type="button" id="add_btn" onclick="yy()">ADD</button>
+    <button type="button" id="back_btn"style="display:none;" >back</button>
+</body>
+<script>
+    var j=["1","2","3","4","5","6","7","8","9","10","11","12"];
+    var i=0;
+    var u;
+    var p;
+    appen(j[0]);
+    function yy(){
+        if(i<11){
+            applysty("display:block;");
+            // document.getElementById("back_btn").style="display:block;";
+            i++;
+        }else{
+            i=0;
+            applysty("display:none;");
+        }
+        appen(j[i]);
+
+    };
+    document.getElementById("back_btn").onclick=function(){
+        if(i==0){
+            applysty("display:none;");
+            i=11;
+        }else{
+            applysty("display:block;");
+            i--;
+        }
+        appen(j[i]);
+    };
+    function appen(u){
+        document.getElementById("dd").innerHTML='<div class="tt" style="text-align:center;color:'+u+';float:left;margin-right:10px;margin-top:10px;width:50px;height:50px;background-color:red;">'+u+'</div>';
+    }
+    function applysty(p){
+        document.getElementById("back_btn").style=p;
+    }
+</script>
+</html>
