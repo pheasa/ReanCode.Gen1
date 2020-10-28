@@ -6,45 +6,51 @@
     <title>Document</title>
 </head>
 <style>
-    .dd{
+    .tt{
+        width: 100px;
+        height: 100px;
         float: left;
-        width: 200px;
-        height: 200px;
-        position: relative;
-        background-color: red;
+        background-color: aquamarine;
+        margin-right: 20px;
     }
-    .tt1{
+    .tt img{
+        height: 50%;
+        width: 100%;
         float: left;
-        position: absolute;
-        width: 70%;
-        height: 70%;
-        top: 0px;
-        left: 0px;
-        background-color: royalblue;
     }
-    .tt2{
+    .tt h5{
         float: left;
-        position: absolute;
-        width: 70%;
-        height: 70%;
-        bottom: 0px;
-        right: 0px;
-        background-color: salmon;
-    }
-    .dd:hover .tt1{
-        opacity: 0.5;
-        background-color: yellow;
-    }
-    .dd:hover .tt2{
-        opacity: 0.5;
-        background-color: rgb(148, 0, 123);
+        width: 100;
+        height: auto;
     }
 </style>
 <body>
-    <div class="dd">
-        <div class="tt1"></div>
-        <div class="tt2"></div>
+    <div id="tt">
     </div>
-
 </body>
+<script>
+    var dd={
+        img:"img/news1.jpg",
+        title:"news1"
+        };
+    var dd1={
+        img:"img/news2.jpg",
+        title:"news2"
+    };
+    var dd2={
+        img:"img/news3.jpg",
+        title:"news3"
+    };
+
+    var myArray = [dd,dd1,dd2];
+    // for(var i=0;i<=1;i++){
+    //     document.getElementById("tt").innerHTML+=myArray[i].name;
+    // }
+    myArray.forEach(arrs => {
+        document.getElementById("tt").innerHTML+='<div class="tt"><img src="'+arrs.img+'" alt=""><h5>'+arrs.title+'</h5></div>';
+    });
+
+    console.log(myArray);
+    // document.getElementById("tt").innerHTML=data1;
+</script>
 </html>
