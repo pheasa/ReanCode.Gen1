@@ -46,7 +46,7 @@
         </div>
     </div>
     <div class="main" id="body">
-        <div class="mix-center">
+        <div class="mix-center" id="mix-center">
             <div class="mix-body" id="top-body">
                 <div class="mix-top-body" id="news-top-body">
                     <div class="top-news-body">
@@ -110,15 +110,8 @@
                 </div>
             </div>
             <div class="mix-body" id="botton-body">
-                <div class="mix-body-head">
-                    <ul style="width: 100%;margin: 0px;float: left;">
-                        <a href="#" style="background-color: red;padding: 10px;color: white;text-decoration: none;float: left;">hello my name pheasa</a>
-                        <div class="corner" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);background-color: red;width: 20px;float: left;height: 100%;height: 43px;"></div>
-                    </ul>
-                </div>
-                <div class="mix-body-body" id="mix-body-body">
+                
                     
-                </div>
             </div>
         </div>
     </div>
@@ -161,13 +154,22 @@
             title:"ព្រាបសុវត្តិទៅកាន់...."
         };
         var news=[news1,news2,news3,news4,news5,news6,news7,news8,news9,news5,news6,news7,news8,news9];
-        var j;
-        news_box(0)
-        function next(){
-            news_box(2)
+        var j=0;
+        var h;
+        news_box(0,"hello");
+        news_box(0,"history");
+        news_box(0,"news");
+        function next1(){
+            news_box(2);
             };
-        function news_box(j){
-        document.getElementById("mix-body-body").innerHTML='<div class="all-mix-body" style="position: relative;">\
+        function news_box(j,h){
+        document.getElementById("botton-body").innerHTML+='<div class="mix-body-head">\
+                    <ul style="width: 100%;margin: 0px;float: left;">\
+                        <a href="#" style="background-color: red;padding: 10px;color: white;text-decoration: none;float: left;">'+h+'</a>\
+                        <div class="corner" style="clip-path: polygon(0 0, 0% 100%, 100% 100%);background-color: red;width: 20px;float: left;height: 100%;height: 43px;"></div>\
+                    </ul>\
+                </div>\
+                <div class="mix-body-body" id="mix-body-body"><div class="all-mix-body" style="position: relative;">\
                         <div class="float-left mix-body-sub-news-lef">\
                             <a href="#" style="height: 300px;width: 100%;float: left;">\
                                 <div class="top" style="height: 65%;float: left;width: 100%;"><img src="'+news[j].imag+'" style="width:100%;height:100%"></div>\
@@ -176,7 +178,7 @@
                         </div>\
                         <div class="float-right mix-body-sub-news-right">\
                             <div class="float-left sub-news-right-more">\
-                                <div id="bott1" class="bott1" style="height: 35%;float: left;width: 100%;">\
+                                <div id="bott'+h+'" class="bott1" style="height: 35%;float: left;width: 100%;">\
                                     \
                                 </div>\
                             </div>\
@@ -188,9 +190,10 @@
                             <button type="button" onclick="next()" id="next"><span class="glyphicon glyphicon-menu-right"></span></button>\
                         </div>\
                     </div>\
+                </div>\
         ';
         for(var i=j+1;i<=j+8;i++){
-        document.getElementById("bott1").innerHTML+='<div class="mini-box-news float-left">\
+        document.getElementById("bott"+h+"").innerHTML+='<div class="mini-box-news float-left">\
                                         <a href="#" style="width:100%;height: 160px;float: left;">\
                                             <div class="mini-img float-left" style="width: 100%;height: 65%;">\
                                                 <img src="'+news[i].imag+'" style="width: 100%;height: 100%;">\
