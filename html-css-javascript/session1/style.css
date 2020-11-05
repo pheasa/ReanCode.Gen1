@@ -199,7 +199,7 @@ body{
     border: none;
     display: none;
 }
-#next{
+.next{
     font-size: 20px;
     height:100px;
     background-color: white;

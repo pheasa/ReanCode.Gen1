@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    
+    <style>
+        .mix-man{
+            background-color: burlywood;
+            margin-top: 10px;
+            margin-left: 10px;
+            float: left;
+            padding: 20px;
+        }
+        .box{
+            width: 50px;
+            height: 50px;
+            float: left;
+            margin-right: 10px;
+            font-size: 20px;
+            background-color: rgb(183, 110, 252);
+            text-align: center;
+            padding-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="main">
+        
+    </div>
+    <script>
+        var news0={
+            imag:"img/news1.jpg",
+            title:"AA0",
+            category:"AA"
+        };
+        var news1={
+            imag:"img/news1.jpg",
+            title:"AA1",
+            category:"AA"
+        };
+        var news2={
+            imag:"img/news1.jpg",
+            title:"AA2",
+            category:"AA"
+        };
+        var news3={
+            imag:"img/news1.jpg",
+            title:"AA3",
+            category:"AA"
+        };
+        var news4={
+            imag:"img/news1.jpg",
+            title:"AA4",
+            category:"AA"
+        };
+        var news5={
+            imag:"img/news1.jpg",
+            title:"AA5",
+            category:"AA"
+        };
+        var news6={
+            imag:"img/news1.jpg",
+            title:"AA6",
+            category:"AA"
+        };
+        var news7={
+            imag:"img/news1.jpg",
+            title:"AA7",
+            category:"AA"
+        };
+        var news8={
+            imag:"img/news1.jpg",
+            title:"AA8",
+            category:"AA"
+        };
+        var news9={
+            imag:"img/news1.jpg",
+            title:"AA9",
+            category:"AA"
+        };
+        var news10={
+            imag:"img/news1.jpg",
+            title:"AA10",
+            category:"BB"
+        };
+        var news11={
+            imag:"img/news1.jpg",
+            title:"AA11",
+            category:"BB"
+        };
+        var news12={
+            imag:"img/news1.jpg",
+            title:"AA12",
+            category:"BB"
+        };
+        var news13={
+            imag:"img/news1.jpg",
+            title:"AA13",
+            category:"BB"
+        };
+        var news14={
+            imag:"img/news1.jpg",
+            title:"AA14",
+            category:"BB"
+        };
+        var news15={
+            imag:"img/news1.jpg",
+            title:"AA15",
+            category:"BB"
+        };
+        var news16={
+            imag:"img/news1.jpg",
+            title:"AA16",
+            category:"BB"
+        };
+        var news17={
+            imag:"img/news1.jpg",
+            title:"AA17",
+            category:"BB"
+        };
+        var news18={
+            imag:"img/news1.jpg",
+            title:"AA18",
+            category:"BB"
+        };
+        var news19={
+            imag:"img/news1.jpg",
+            title:"AA19",
+            category:"BB"
+        };
+        var news20={
+            imag:"img/news1.jpg",
+            title:"AA20",
+            category:"CC"
+        };
+        var news21={
+            imag:"img/news1.jpg",
+            title:"AA21",
+            category:"CC"
+        };
+        var news22={
+            imag:"img/news1.jpg",
+            title:"AA22",
+            category:"CC"
+        };
+        var news23={
+            imag:"img/news1.jpg",
+            title:"AA23",
+            category:"CC"
+        };
+        var news24={
+            imag:"img/news1.jpg",
+            title:"AA24",
+            category:"CC"
+        };
+        var news25={
+            imag:"img/news1.jpg",
+            title:"AA25",
+            category:"CC"
+        };
+        var news26={
+            imag:"img/news1.jpg",
+            title:"AA26",
+            category:"CC"
+        };
+        var news27={
+            imag:"img/news1.jpg",
+            title:"AA27",
+            category:"CC"
+        };
+        var news28={
+            imag:"img/news1.jpg",
+            title:"AA28",
+            category:"CC"
+        };
+        var news29={
+            imag:"img/news1.jpg",
+            title:"AA29",
+            category:"CC"
+        };
+
+        var AA=[news0,news1,news2,news3,news4,news5,news6,news7,news8,news9,];
+        var BB=[news10,news11,news12,news13,news14,news15,news16,news17,news18,news19];
+        var CC=[news20,news21,news22,news23,news24,news25,news26,news27,news28,news29]
+        var p=[AA,BB,CC]
+        var q=0;
+        var ww;
+        var j=0;
+        var l;
+        // var uu;
+        var element;
+
+        p.forEach(element => {
+            document.getElementById("main").innerHTML+='<div class="mix-man">\
+            <div class="box" id="man'+q+'-box0">'+element[0].title+'</div>\
+            <div class="box" id="man'+q+'-box1">'+element[1].title.toString()+'</div>\
+            <div class="box" id="man'+q+'-box2">'+element[2].title.toString()+'</div>\
+            <div class="box" id="man'+q+'-box3">'+element[3].title.toString()+'</div>\
+            <div class="box" id="man'+q+'-box4">'+element[4].title.toString()+'</div>\
+            <button type="button" id="'+q+'" value="4" onclick="next_btn(this)">></button>\
+            </div>';
+            q=q+1;
+        });
+        function next_btn(ww){
+            // alert(ww.id);
+            l = document.getElementById(ww.id).value;
+            for(var i=0;i<5;i++){
+                var uu='man'+ww.id+'-box'+i.toString();
+                // console.log(document.getElementById(q+'-box4').className);
+                l=parseInt(l);
+                l=l+1;
+                try{
+                    document.getElementById(uu.toString()).innerText=p[ww.id][l].title;
+                    console.log(p[ww.id][l].titl);
+                }catch(err){
+                    document.getElementById(uu.toString()).innerText="NULL";
+
+                }
+            }
+            document.getElementById(ww.id).value=l;
+        }
+
+
+   
+
+
+        // for(var j=0;j<5;j++){
+        //     var u=j+1
+        //     var dd='man0-box'+u;
+        //     document.getElementById(dd).innerText=f[j+e];
+        //     // alert(dd);
+        //     j=j++;
+        // }
+    </script>
+</body>
+</html>
