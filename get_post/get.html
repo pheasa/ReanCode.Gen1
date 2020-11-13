@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Get Current URL in JavaScript</title>
+</head>
+<body>
+    <!-- <div id="username"></div>
+    <div id="password"></div> -->
+    <div id="display"></div>
+
+
+
+    <script>
+        // alert("hello")
+        var dd=window.location.href;
+        var al=parseURLParams(dd);
+        var pass="admin";
+        var user="admin"
+        if(pass==al["password"] && user==al["username"]){
+            document.getElementById("display").innerHTML="<h1>Login is done!</h1>";
+        }else{
+            // document.getElementById("display").innerHTML="<h1>plase check username or password again</h1>";
+            window.location.replace('file:///C:/wamp64/www/reancode/post.html');
+        }
+        // console.log(al["username"]);
+        // document.getElementById("username").innerText=al["username"];
+        // document.getElementById("password").innerText=al["password"];
+        function parseURLParams(url) {
+            var queryStart = url.indexOf("?") + 1,
+                queryEnd   = url.indexOf("#") + 1 || url.length + 1,
+                query = url.slice(queryStart, queryEnd - 1),
+                pairs = query.replace(/\+/g, " ").split("&"),
+                parms = {}, i, n, v, nv;
+
+            if (query === url || query === "") return;
+
+            for (i = 0; i < pairs.length; i++) {
+                nv = pairs[i].split("=", 2);
+                n = decodeURIComponent(nv[0]);
+                v = decodeURIComponent(nv[1]);
+
+                if (!parms.hasOwnProperty(n)) parms[n] = [];
+                parms[n].push(nv.length === 2 ? v : null);
+            }
+            return parms;
+        }
+    </script>
+</body>
+</html>
