@@ -1,3 +1,17 @@
+<?php 
+$conn = mysqli_connect("localhost","root","","reancode");
+$conn->set_charset('utf8');
+if ($conn->connect_error) {
+die("Connection failed: " . $conn->connect_error);
+}
+$sql = "SELECT * FROM menu WHERE status=1";
+$result = $conn->query($sql);
+// print_r($result);
+// foreach ($result as $arr){
+//     // echo '<a href="'.$arr[0].'">'.$arr[1].'</a>';
+// }
+// print_r($result)
+?>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -37,10 +51,15 @@
                     <img src="img/home icon.png" alt="">
                 </a>
                 <div class="sub-menu">
-                    <a href="#">កម្សាន្ត</a>
-                    <a href="#">បច្ចេកវិទ្យា</a>
+                    <?php 
+                    foreach ($result as $arr){?>
+                        <a href="<?php echo $arr["id"] ?>"><?php echo $arr["name"] ?></a>
+                    <?php
+                    }
+                    ?>                
+                    <!-- <a href="#">បច្ចេកវិទ្យា</a>
                     <a href="#">ព័តមានវិទ្យា</a>
-                    <a href="#">ភាសាខ្មែរ</a>
+                    <a href="#">ភាសាខ្មែរ</a> -->
                 </div>
             </div>
         </div>
