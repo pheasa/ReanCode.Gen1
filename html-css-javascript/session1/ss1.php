@@ -1,9 +1,5 @@
 <?php 
-$conn = mysqli_connect("localhost","root","","reancode");
-$conn->set_charset('utf8');
-if ($conn->connect_error) {
-die("Connection failed: " . $conn->connect_error);
-}
+include "db.php";
 $sql = "SELECT * FROM menu WHERE status=1";
 $result = $conn->query($sql);
 // print_r($result);
@@ -53,7 +49,7 @@ $result = $conn->query($sql);
                 <div class="sub-menu">
                     <?php 
                     foreach ($result as $arr){?>
-                        <a href="<?php echo $arr["id"] ?>"><?php echo $arr["name"] ?></a>
+                        <a href="list_page.php?cate_ind=<?php echo $arr["id"] ?>"><?php echo $arr["name"] ?></a>
                     <?php
                     }
                     ?>                

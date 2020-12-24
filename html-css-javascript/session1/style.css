@@ -228,3 +228,17 @@ body{
     background-color: darkmagenta;
 }
 /* ############end footer################ */
+/* ///////////////////list page////////////////////////// */
+#list_news{
+    width: 100%;
+    height: 120px;
+    /* background-color: rebeccapurple; */
+}
+#list_news .cover{
+    height: 100%;
+    width: 20%;
+}
+#list_news .discription{
+    height: 100%;
+    width: 80%;
+}
